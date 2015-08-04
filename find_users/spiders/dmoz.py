@@ -8,7 +8,7 @@ class DmozSpider(Spider):
     name = "dmoz"
     allowed_domains = ["dmoz.org"]
     start_urls = [
-        "https://github.com/robconery"
+        "https://github.com/"
 
     ]
     user_name="";
