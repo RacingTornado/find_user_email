@@ -1,22 +1,24 @@
 from scrapy.spiders import Spider
 from scrapy.selector import Selector
+import duckduckgo
 
-from dirbot.items import Website
+from find_users.items import Website
 
 
 class DmozSpider(Spider):
     name = "dmoz"
     allowed_domains = ["dmoz.org"]
-    start_urls = [
-        "https://github.com/robconery"
 
-    ]
     user_name="";
 
 
     def __init__(self, user_name):
       #super(DmozSpider, self).__init__(*args, **kwargs)
       self.user_name = user_name;
+      self.start_urls = [
+        "https://github.com/"
+
+    ]
 
     def parse(self, response):
         """
@@ -33,6 +35,9 @@ class DmozSpider(Spider):
 
     def generate_links(self):
         print self.user_name;
+        r = duckduckgo.query('DuckDuckGo')
+        self.start_urls.append('data');
+        print self.start_urls;
 
 
 emp1 = DmozSpider("My name");
