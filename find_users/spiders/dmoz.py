@@ -8,6 +8,11 @@ from find_users.items import Website
 class DmozSpider(Spider):
     name = "dmoz"
     allowed_domains = ["dmoz.org"]
+<<<<<<< HEAD
+=======
+    start_urls = [
+        "https://github.com/"
+>>>>>>> 22ccd9ce6ca1fc9c18281a576e5cacc6f1f4245c
 
     user_name="";
 
